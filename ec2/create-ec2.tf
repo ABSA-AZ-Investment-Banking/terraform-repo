@@ -12,7 +12,7 @@ resource "aws_instance" "web-serverr-1a" {
 }
 resource "aws_security_group" "Allow_ssh"{
     name = "Allow_ssh"
-    description = "Allow ssh access"
+    description = "Allow ssh access to ec2 instance"
     vpc_id = "vpc-043717386db628d4b"
 
     #ingres means inbond
