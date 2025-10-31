@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('init') {
             steps {
-                sh 'echo Hi this is stage init'
+                sh 'echo Hi this is stage init test'
             }
         }
         stage('plan') {
