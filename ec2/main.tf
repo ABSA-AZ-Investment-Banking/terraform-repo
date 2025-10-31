@@ -1,14 +1,14 @@
 #resource "resource_type" "resource_name"
 
-resource "aws_instance" "web-serverr-1a" {
-    ami = "ami-0c15e602d3d6c6c4a"
+resource "aws_instance" "dev-jenkins-agent" {
+    ami = "ami-0bdd88bd06d16ba03"
     vpc_security_group_ids = [aws_security_group.Allow_ssh.id] 
     #it will create a security group first and create a instance by using this sec group
-    instance_type = "t3.micro"
+    instance_type = var.instance_type
+    key_name = var.key-pair
+    region = local.region
 
-    tags = {
-        Name = "web-serverr-1a"
-    }
+    tags = local.comman_tags
 }
 resource "aws_security_group" "Allow_ssh"{
     name = "Allow_ssh"
