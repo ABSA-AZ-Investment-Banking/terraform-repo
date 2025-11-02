@@ -12,7 +12,7 @@ pipeline {
   environment {
     TF_DIR = './ec2'  // Terraform working directory
     AWS_REGION = 'us-east-1'
-    TERRAFORM_VERSION = '1.13.4' // ✅ Updated to latest version
+    TERRAFORM_VERSION = '1.13.4' // ✅ Updated to latest version of terraform
   }
 
   stages {
