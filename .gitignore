@@ -1,5 +1,5 @@
-*.tfstate
-.terraform
-terraform.tfstate.backup
-.terraform.lock.hcl
+#*.tfstate
+#.terraform
+#terraform.tfstate.backup
+#.terraform.lock.hcl
 rough-book
