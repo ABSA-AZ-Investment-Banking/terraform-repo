@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-state-bucket"
-    key            = "infra/terraform.tfstate"
-    region         = "us-east-1" # or your region
-    dynamodb_table = "terraform-locks"
-    encrypt        = true
+    bucket        = "siva-terraform-state-bucket-dev"
+    key           = "infra/terraform.tfstate"
+    region        = "us-east-1"
+    encrypt       = true
+    use_lockfile  = true   # replaces dynamodb_table
   }
 }
