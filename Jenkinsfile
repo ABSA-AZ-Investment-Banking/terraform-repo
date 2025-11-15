@@ -1,7 +1,6 @@
 pipeline {
-  
   agent any
-
+  
   parameters {
     choice(
       name: 'STAGE_TO_RUN',
