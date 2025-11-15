@@ -1,7 +1,7 @@
 #resource "resource_type" "resource_name"
 
 resource "aws_instance" "dev-jenkins-agent" {
-    ami = "ami-0bdd88bd06d16ba03"
+    ami = data.aws_ami.nexus_linux.id
     vpc_security_group_ids = [aws_security_group.Allow_ssh.id] 
     #it will create a security group first and create a instance by using this sec group
     instance_type = var.instance_type
