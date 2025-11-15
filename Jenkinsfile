@@ -1,7 +1,6 @@
 pipeline {
-  agent {
-    label 'AGENT-01'
-  }
+  
+  agent any
 
   parameters {
     choice(
