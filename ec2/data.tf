@@ -11,5 +11,5 @@ data "aws_ami" "nexus_linux" {
     values = ["hvm"]
   }
 
-  owners = ["amazon"]
+  owners = ["834988743121"]
 }
