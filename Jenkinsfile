@@ -40,13 +40,15 @@ pipeline {
       when {
         anyOf {
           expression { params.STAGE_TO_RUN == 'ALL' }
-          
+          expression { params.STAGE_TO_RUN == 'INIT' }
           expression { params.STAGE_TO_RUN == 'PLAN' }
+          expression { params.STAGE_TO_RUN == 'APPLY' }
+          expression { params.STAGE_TO_RUN == 'DESTROY' }
         }
       }
       steps {
         dir("${env.TF_DIR}") {
-          sh 'terraform init -input=false -migrate-state'
+          sh 'terraform init -input=false'
         }
       }
     }
