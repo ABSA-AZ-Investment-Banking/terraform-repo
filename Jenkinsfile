@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  
+
   parameters {
     choice(
       name: 'STAGE_TO_RUN',
@@ -40,7 +40,8 @@ pipeline {
       when {
         anyOf {
           expression { params.STAGE_TO_RUN == 'ALL' }
-          expression { params.STAGE_TO_RUN == 'INIT' }
+          
+          expression { params.STAGE_TO_RUN == 'PLAN' }
         }
       }
       steps {
