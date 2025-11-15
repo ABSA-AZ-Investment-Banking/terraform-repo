@@ -46,7 +46,7 @@ pipeline {
       }
       steps {
         dir("${env.TF_DIR}") {
-          sh 'terraform init -input=false -automigrate'
+          sh 'terraform init -input=false -migrate-state'
         }
       }
     }
