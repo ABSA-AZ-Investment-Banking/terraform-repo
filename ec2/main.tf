@@ -8,7 +8,7 @@ resource "aws_instance" "dev-jenkins-agent" {
     key_name = var.key-pair
     region = local.region
 
-    tags = local.comman_tags
+    #tags = local.comman_tags
 }
 resource "aws_security_group" "Allow_ssh"{
     name = "Allow_ssh"
